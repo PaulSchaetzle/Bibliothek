@@ -2,6 +2,7 @@ public class Buch implements Medium {
     private String name;
     private String author;
     private String publisher;
+    private Ausleihe ausleihe;
 
     public String getName() {
         return name;

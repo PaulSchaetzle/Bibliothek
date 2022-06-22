@@ -1,16 +1,19 @@
 import java.time.LocalDate;
 
 public class Ausleihe {
+
     private Medium medium;
     private LocalDate ausleihDatum;
-    private AusleihBerechtigte ausleihBerechtigte;
+    private AusleihBerechtigter ausleihBerechtigter;
     private LocalDate rueckgabeFrist;
     private int verlaengerung;
-    private boolean vorbestellung;
 
-    Ausleihe(AusleihBerechtigte ausleihBerechtigte, Medium medium){
-        this.ausleihBerechtigte = ausleihBerechtigte;
+    Ausleihe(AusleihBerechtigter ausleihBerechtigter, Medium medium){
+        this.ausleihBerechtigter = ausleihBerechtigter;
         this.medium = medium;
+        ausleihDatum = LocalDate.now();
+        rueckgabeFrist = ausleihDatum.plusDays(14);
+        verlaengerung = 0;
     }
 
     public void ausleihVerlaengern(){
@@ -27,7 +30,7 @@ public class Ausleihe {
         }
     }
 
-    public void mediumVorbestellen(){
-        
+    public Medium getMedium() {
+        return medium;
     }
 }
