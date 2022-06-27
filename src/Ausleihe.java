@@ -16,13 +16,13 @@ public class Ausleihe {
         verlaengerung = 0;
     }
 
-    public void ausleihVerlaengern(){
+    public void ausleihVerlaengern() throws Exception{
         if(verlaengerung == 0){
             this.rueckgabeFrist = rueckgabeFrist.plusDays(14);
             verlaengerung++;
         }
         else if(verlaengerung == 2){
-            System.out.println("Die maximale Anzahl an Verlängerungen wurde schon erreicht.");
+            throw new Exception("Die maximale Anzahl an Verlängerungen wurde schon erreicht.");
         }
         else{
             this.rueckgabeFrist = rueckgabeFrist.plusDays(7);

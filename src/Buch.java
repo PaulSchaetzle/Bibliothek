@@ -13,4 +13,13 @@ public class Buch implements Medium {
         this.author = author;
         this.publisher = publisher;
     }
+
+    public void setAusleihe(Ausleihe ausleihe) {
+        this.ausleihe = ausleihe;
+    }
+
+    @Override
+    public Ausleihe getAusleihe() {
+        return ausleihe;
+    }
 }

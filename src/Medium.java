@@ -1,3 +1,5 @@
 public interface Medium {
-    public String getName();
+     String getName();
+     void setAusleihe(Ausleihe ausleihe);
+     Ausleihe getAusleihe();
 }
